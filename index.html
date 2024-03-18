@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        .tab {
+            overflow: hidden;
+            border: 1px solid #f9f0f0;
+            background-color: #165e06;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #065e5e;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #0a0a0a;
+            background-color: #065e5e;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: rgb(180, 223, 170);
+            border-top: none;
+        }
+
+        .tab::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body background="image.jpg">
+
+<div class="col-lg-8 col-md-7">
+    <div class="team-single-text padding-50px-left sm-no-padding-left">
+        <h1 class="font-size38 sm-font-size32 xs-font-size30">Mang Jacob’s Kainan</h1>
+
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'AboutUs')">About Us</button>
+    <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
+    <button class="tablinks" onclick="openTab(event, 'Services')">Services</button>
+    <button class="tablinks" onclick="openTab(event, 'ContactUs')">Contact Us</button>
+</div>
+
+<div id="AboutUs" class="tabcontent">
+    <b> Continue your dreams and keep eating.</b><br>
+    <img src="eatery.jpg" style="display: block; margin: 0 auto;">
+    <col-lg-4></col-lg-4> <col-md-5></col-md-5> <xs-margin-25></xs-margin-25>
+</div>
+
+<div id="Home" class="tabcontent">
+    <ul>
+        <b><li>WHEN YOU’RE HERE, YOU’RE FAMILY.</li></b>
+        <b><li>STOP, EAT, AND GO.</li></b>
+        <b><li>WE SERVE PASSION.</li></b>
+        <b><li>GOOD TIME GREAT TASTE.</li></b>
+        <b><li>IN THIS STORE YOU ARE LOVED</li></b>
+        <b><li>ANO BA KUMAIN KA NA DITO</li></b>
+    </ul>
+</div>
+
+<div id="Services" class="tabcontent">
+    Savor the essence of culinary delight with Savory Mang Jacob’s Kainan, where passion for flavor meets exemplary service. Our commitment is to craft unforgettable dining experiences tailored to every occasion, from intimate gatherings to grand celebrations.
+
+At Savory Creations, we blend creativity and expertise to curate menus that tantalize the taste buds and leave a lasting impression. Whether you're planning a corporate event, wedding reception, or a casual get-together, our team of culinary artisans will exceed your expectations with their culinary prowess and attention to detail.
+</p>
+    <img src="menu.jfif" style="display: block; margin: 0 auto;">
+    <col-lg-4></col-lg-4> <col-md-5></col-md-5> <xs-margin-25></xs-margin-25>
+
+</div>
+
+<div id="ContactUs" class="tabcontent">
+    <b>Opening Hours:</b><br>
+    <i>Monday - Funday: 05:30 - 13:30</i><br>
+    </p>
+    <b>Address:</b><br>
+    <i>Pogi Street, Di Matibag 123 Ikaw Lang</i>
+    </p>
+    <span class="space"></span>
+    <img src="wiw.jpg">
+</div>
+
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+</body>
+</html>
